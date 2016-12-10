@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.Customers;
 
 
 public class ReadQuery {
@@ -69,18 +70,63 @@ public class ReadQuery {
         
         table += "<table border=1";
         
-        while(this.results.next()){
-        
-            Customers customers = new Customers();
-            customers.setCustID(this.results.getInt("custID"));
-            customers.setCustID(this.results.getInt("custID"));
-            customers.setCustID(this.results.getInt("custID"));
-            customers.setCustID(this.results.getInt("custID"));
-            customers.setCustID(this.results.getInt("custID"));
-            customers.setCustID(this.results.getInt("custID"));
-            
-            
-            
+        try {
+            while(this.results.next()){
+                
+                Customers customers = new Customers();
+                customers.setCustID(this.results.getInt("custID"));
+                customers.setFirstName(this.results.getString("firstName"));
+                customers.setLastName(this.results.getString("lastName"));
+                customers.setAddr1(this.results.getString("addr1"));
+                customers.setAddr2(this.results.getString("addr2"));
+                customers.setCity(this.results.getString("city"));
+                customers.setState(this.results.getString("state"));
+                customers.setZip(this.results.getString("zip"));
+                customers.setEmailAddr(this.results.getString("emailAddr"));
+                
+                table += "<tr>";
+                table += "<td>";
+                table += customers.getCustID();
+                table += "</td>";
+                
+                table += "<td>";
+                table += customers.getFirstName();
+                table += "</td>";
+                
+                table += "<td>";
+                table += customers.getLastName();
+                table += "</td>";
+                
+                table += "<td>";
+                table += customers.getAddr1();
+                table += "</td>";
+                
+                table += "<td>";
+                table += customers.getAddr2();
+                table += "</td>";
+                
+                table += "<td>";
+                table += customers.getCity();
+                table += "</td>";
+                
+                table += "<td>";
+                table += customers.getState();
+                table += "</td>";
+                
+                table += "<td>";
+                table += customers.getZip();
+                table += "</td>";
+                
+                table += "<td>";
+                table += customers.getEmailAddr();
+                table += "</td>";
+                
+                
+                table += "</tr>";
+                
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         table += "</table>";
