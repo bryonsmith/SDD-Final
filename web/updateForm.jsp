@@ -7,16 +7,27 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Update A Customer</title>
     </head>
     <body>
+        
+        <div class="wrap"> <!--div to hold all other divs WRAP DIV -->
+            
+            <!--Header-->
+            <%@include file="includes/header.jsp" %>
+            
+            <!--Menu-->
+            <%@include file="includes/menu.jsp" %>
+        
+            <div class="main"> <!-- MAIN div -->
+            
         <h1>Update A Customer Record</h1>
         
         <form name="updateForm" action="updateCustomers" method="get">
         
         <table class="update">
-                <th>Add a New Customer:</th><th></th>
+                <th>Update a Customer Record:</th><th></th>
                         <tr>
                             <td>Customer ID:</td>
                             <td><input type="text" name="custID" value="<%= customers.getCustID() %>" readonly/></td>
@@ -61,6 +72,12 @@
 
             
         </form>
+                        
+                        <br><br><br><br><br><br><br><br><br><br>
+            </div>
+        <!--footer-->
+        <%@include file="includes/footer.jsp" %>
         
+       </div>  <!--close WRAP DIV-->
     </body>
 </html>

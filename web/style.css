@@ -1,5 +1,12 @@
+/*#222930
+#4EB1BA
+#E9E9E9
+#DDA0DD
+#AFEEEE
+*/
+
 body {
-    background: #D2B48C;
+    background: #222930;
 }
 
 table.read{
@@ -20,15 +27,15 @@ table.read th, td{
 }
 
 table.read td:hover{
-    background-color: #CCCCCC;
+    background-color: #AFEEEE;
 }
 
 table.read tr:nth-child(even){
-    background-color: #F2F2F2;
+    background-color: #E9E9E9;
 }
 
 table.read th{
-    background-color: #FFFF99;
+     background-color: #E9E9E9;
     color: #696969;
     height: 30px;
     font-size: 15pt;
@@ -36,8 +43,8 @@ table.read th{
 }
 
 table.read td{
-    background-color: #F08080;
-    color: white;
+    background-color: #AFEEEE;
+    color: gray;
     border: 3px solid white;
 }
 
@@ -55,11 +62,11 @@ table.add th, td{
 }
 
 table.add tr:nth-child(even){
-    background-color: #F2F2F2;
+    background-color: #E9E9E9;
 }
 
 table.add th{
-    background-color: #FFFF99;
+    background-color: #E9E9E9;
     color: #696969;
     height: 30px;
     font-size: 15pt;
@@ -67,8 +74,8 @@ table.add th{
 }
 
 table.add td{
-    background-color: #F08080;
-    color: white;
+    background-color: #AFEEEE;
+    color: gray;
     border: 3px solid white;
 }
 
@@ -86,11 +93,11 @@ table.update th, td{
 }
 
 table.update tr:nth-child(even){
-    background-color: #F2F2F2;
+    background-color: #DDA0DD;
 }
 
 table.update th{
-    background-color: #FFFF99;
+     background-color: #E9E9E9;
     color: #696969;
     height: 30px;
     font-size: 15pt;
@@ -98,8 +105,8 @@ table.update th{
 }
 
 table.update td{
-    background-color: #F08080;
-    color: white;
+    background-color: #AFEEEE;
+    color: gray;
     border: 3px solid white;
 }
 
@@ -140,8 +147,8 @@ h2{
 
 /* formats header of the page */
 .header{
-    background-color:#FFFF99;
-    text-align: left;
+    background-color:#4EB1BA;
+    text-align: center;
     padding: 25px;
 }
 .headerImg{
@@ -189,7 +196,7 @@ h2{
 * html #navlist { height: 1%; }
 
 * html #navlist li{
-    backgound-color: #696969;
+    backgound-color: #AFEEEE;
     display: block;
     float: left;
 }
@@ -200,14 +207,14 @@ h2{
  
 /* formats footer */
 .footer{
-    background-color:#FFFF99;
+    background-color:#AFEEEE;
     text-align: center;
     padding: 25px;
 }
 
 /* formats main content */
 .main{
-    background-color:#F08080;
+    background-color:#DDA0DD;
     text-align: left;
     padding: 25px;
 }

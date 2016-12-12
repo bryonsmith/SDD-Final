@@ -11,11 +11,25 @@
     <% String table = (String) request.getAttribute("table"); %>
     
     <body>
+        <div class="wrap"> <!--div to hold all other divs WRAP DIV -->
+            
+            <!--Header-->
+            <%@include file="includes/header.jsp" %>
+            
+            <!--Menu-->
+            <%@include file="includes/menu.jsp" %>
+            
+        <div class="main"> <!-- MAIN div -->    
+            
         <h1>Customers Database</h1>
         
-        <a href="read"> View Customers</a>
-        <br><br>
-        <a href="search.jsp">Search Customers</a>
+        <p>Welcome To the Customer View, Search, Add, Delete, and Update</p>
         
+        </div>
+        
+        <!--footer-->
+        <%@include file="includes/footer.jsp" %>
+        
+       </div>  <!--close WRAP DIV-->
     </body>
 </html>
