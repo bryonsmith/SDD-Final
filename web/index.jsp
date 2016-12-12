@@ -1,20 +1,19 @@
-<%-- 
-    Document   : index
-    Created on : Dec 10, 2016, 3:27:37 AM
-    Author     : Bryon
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
         <title>My Customers</title>
     </head>
+    
+    <% String table = (String) request.getAttribute("table"); %>
+    
     <body>
-        <h1>My Customers Database</h1>
+        <h1>User Customers vDatabase</h1>
         
-        <a href="read"> View All Customers</a>
+        <a href="read"> View Customers</a>
         
     </body>
 </html>
