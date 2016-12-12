@@ -121,6 +121,10 @@ public class ReadQuery {
                 table += customers.getEmailAddr();
                 table += "</td>";
                 
+                table += "<td>";
+                table += "<a href=delete?custID=" + customers.getCustID() + "> Delete </a>";
+                table += "</td>";
+                
                 
                 table += "</tr>";
                 
