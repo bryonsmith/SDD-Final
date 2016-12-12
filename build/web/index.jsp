@@ -11,7 +11,7 @@
     <% String table = (String) request.getAttribute("table"); %>
     
     <body>
-        <h1>User Customers vDatabase</h1>
+        <h1>Customers Database</h1>
         
         <a href="read"> View Customers</a>
         

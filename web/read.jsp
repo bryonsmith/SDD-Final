@@ -12,7 +12,12 @@
     
     <body>
         <h1>Customer Database</h1>
+        
         <%= table %>
+        
+        <br><br>
+        
+        <a href="add">Add a New Customer </a>
         
     </body>
 </html>
