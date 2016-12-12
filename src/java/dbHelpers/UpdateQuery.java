@@ -5,11 +5,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.Customers;
 
 /**
  *
@@ -54,8 +56,25 @@ public class UpdateQuery {
 
     public void doUpdate (Customers customers){
     
-        String query = "UPDATE customers SET firstName = ?, lastName = ?, addr1 = ?, addr2 = ?, city = ?, state = ?, zip = ?, emailAddr = ? WHERE custID = ?";
-        
+        try {
+            String query = "UPDATE customers SET firstName = ?, lastName = ?, addr1 = ?, addr2 = ?, city = ?, state = ?, zip = ?, emailAddr = ? WHERE custID = ?";
+            
+            PreparedStatement ps = conn.prepareStatement(query);
+            
+            ps.setString(1, customers.getFirstName());
+            ps.setString(2, customers.getLastName());
+            ps.setString(3, customers.getAddr1());
+            ps.setString(4, customers.getAddr2());
+            ps.setString(5, customers.getCity());
+            ps.setString(6, customers.getState());
+            ps.setString(7, customers.getZip());
+            ps.setString(8, customers.getEmailAddr());
+            ps.setInt(9, customers.getCustID());
+            
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(UpdateQuery.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }

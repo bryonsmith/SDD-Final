@@ -19,7 +19,7 @@
                 <th>Add a New Customer:</th><th></th>
                         <tr>
                             <td>Customer ID:</td>
-                            <td><input type="text" name="custID" value="<%= customers.getCustID() %>" /></td>
+                            <td><input type="text" name="custID" value="<%= customers.getCustID() %>" readonly/></td>
                         </tr>
                         <tr>
                             <td>First Name:</td>

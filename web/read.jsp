@@ -19,6 +19,8 @@
         <br><br>
         
         <a href="add">Add a New Customer </a>
+         <br><br>
+        <a href="search.jsp">Search Customers</a>
         
     </body>
 </html>
