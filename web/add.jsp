@@ -5,6 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>Add a New Customer</title>
     </head>
     <body>
@@ -12,39 +13,43 @@
         
         <form name="addForm" action="addCustomers" method="get">
             
-            <label>First Name:</label>
-            <input type="text" name="firstName" value="" />
+            <table class="add">
+                <th>Add a New Customer:</th><th></th>
+                        <tr>
+                            <td>First Name:</td>
+                            <td><input type="text" name="firstName" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>Last Name:</td>
+                            <td><input type="text" name="lastName" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td><input type="text" name="addr1" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>Apartment Number:</td>
+                            <td><input type="text" name="addr2" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>City:</td>
+                            <td><input type="text" name="city" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>State:</td>
+                            <td><input type="text" name="state" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>Zip:</td>
+                            <td><input type="text" name="zip" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>Email Address:</td>
+                            <td><input type="text" name="emailAddr" value=""/></td>
+                        </tr>                
+                        
+                </table>
             <br>
-            
-            <label>Last Name:</label>
-            <input type="text" name="lastName" value="" />
-            <br>
-            
-            <label>Address:</label>
-            <input type="text" name="addr1" value="" />
-            <br>
-            
-            <label>Apartment Number:</label>
-            <input type="text" name="addr2" value="" />
-            <br>
-            
-            <label>City:</label>
-            <input type="text" name="city" value="" />
-            <br>
-            
-            <label>State:</label>
-            <input type="text" name="state" value="" />
-            <br>
-            
-            <label>Zip:</label>
-            <input type="text" name="zip" value="" />
-            <br>
-            
-            <label>Email Address:</label>
-            <input type="text" name="emailAddr" value="" />
-            <br>
-            
-
             <button type="reset" value="Reset"> Reset </button>
             <button type="submit" value="Submit"> Submit </button>
 

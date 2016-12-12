@@ -5,7 +5,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Customers Database</title>
     </head>
     
     <% String table = (String) request.getAttribute("table"); %>
